@@ -1,3 +1,87 @@
+@import "bootstrap";
+
+.booyah-box {
+    -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+    -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+    box-shadow: 1px 1px 2px 0 #d0d0d0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+    padding: 10px;
+    border-radius: 15px;
+}
+
 .main-header    {
-    color: rgb(179, 0, 0);
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.navbar-brand .navbar-inverse  {
+    color: #029BFF;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    font-size: 26px;
+    margin-bottom: 0;
+}
+
+.navbar {
+    box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.header-nav-bar {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.main_page {
+    background: image_url('mainRoad') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 370px;
+    box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.frosty {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 15px;
+}
+
+.frosty h1  {
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 100;
+    text-shadow: rbga (0, 0, 0, 0.95) 1px 1px;
+}
+
+.frosty h2  {
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 200;
+    text-shadow: rgba (0, 0, 0, 0.95) 1px 1px;
+}
+
+.verticalLine {
+    border-left: 1px solid white;
+    height: 50px;
+  }
+
+hr    {
+      border-color: white;
+  }
+
+.clear  {
+    clear: both;
+}
+
+.btn-secondary  {
+    font-weight: bold;
 }
