@@ -1,12 +1,13 @@
 <br />
 <div class="booyah-box col-10 offset-1">
-    <h4 class="main-header">Enter the name and description of the project you are working on:</h4>
+    <h4 class="main-header">What is your project about?</h4>
     <br />
     <%= simple_form_for @project do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
+        <%= f.input :name, label: "Name of Project:", placeholder: "Project's Name" %>
+        <%= f.input :description, label: "Description of Project:", placeholder: "Quick Description of your Project" %>
         <br />
         <%= f.input :due_date %>
+
         <%= f.submit 'Create', class: 'btn btn-primary' %>
     <% end %>
 </div>

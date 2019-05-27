@@ -1,5 +1,7 @@
 {
   "name": "tackleproject",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "flatpickr": "^4.5.7"
+  }
 }
