@@ -1,0 +1,26 @@
+<div class="booyah-box">
+
+    <div class="row">
+        <div class="col-4">
+            <%= image_tag 'user.png' %>
+        </div>
+
+        <div class="col-8">
+            <h1>My Projects</h1>
+            <h4><%= current_user.email %></h4>
+            <h5>Member since: <%= current_user.created_at.strftime("%B %d, %Y") %></h5>
+            <br />
+
+        </div>
+
+    </div>
+
+    <div>
+        <% @user.projects.each do |project| %>
+            <%= project.inspect %>
+        <% end %>
+    </div>
+    
+    <div class="clear"></div>
+
+</div>

@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+    before_action :authenticate_user!, only: [:create, :show]
 
     def index
         @projects = Project.all
@@ -11,6 +12,10 @@ class ProjectsController < ApplicationController
     def create
         Project.create(project_params)
         redirect_to root_path
+    end
+
+    def show
+        @project = Project.find(params[:id])
     end
 
     private
