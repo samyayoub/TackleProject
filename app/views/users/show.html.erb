@@ -17,7 +17,11 @@
 
     <div>
         <% @user.projects.each do |project| %>
-            <%= project.inspect %>
+            <h1><%= link_to project.name, project_path(project) %></h1>
+            <br />
+            <%= project.description %><br />
+            <%= project.due_date.to_formatted_s(:rfc822) %>
+            <br /><br />
         <% end %>
     </div>
     

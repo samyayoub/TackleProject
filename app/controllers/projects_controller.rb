@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-    before_action :authenticate_user!, only: [:create, :show]
+    before_action :authenticate_user!, only: [:create, :show,]
 
     def index
         @projects = Project.all
@@ -10,8 +10,15 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        Project.create(project_params)
-        redirect_to root_path
+        # Project.create(project_params)
+        # redirect_to root_path
+
+        @project = current_user.projects.create(project_params)
+        # if @project.valid?
+            redirect_to root_path
+        # else
+        #     render :new, status: :unprocessable_entity
+        # end
     end
 
     def show

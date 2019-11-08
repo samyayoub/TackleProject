@@ -27,15 +27,15 @@ RSpec.describe ProjectsController, type: :controller do
             expect(response).to redirect_to new_user_session_path
         end
 
-        # it "should successfully create a new project in our database" do
+        # it "should successfully create a new project in database" do
         #     user = FactoryBot.create(:user)
         #     sign_in user
 
         #     post :create, params: { 
         #         project: { 
-        #             name: 'New Project',
-        #             description: 'Description',
-        #             due_date: '7/30/2019'
+        #             name: "New Project",
+        #             description: "Description",
+        #             due_date: "7/30/2022"
         #         }
         #     }
             
@@ -43,6 +43,7 @@ RSpec.describe ProjectsController, type: :controller do
 
         #     project = Project.last
         #     expect(project.name).to eq('New Project')
+        #     expect(project.user).to eq(user)
         # end
 
     end
