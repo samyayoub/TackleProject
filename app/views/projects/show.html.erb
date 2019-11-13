@@ -10,7 +10,13 @@
     <h7>* Click and drag tasks to re-arrange</h7>
     <br /><br />
 </div>
-<div class="box-timeline" id="newVisualization"></div>
+
+<div class="box-timeline">
+    <div id="newVisualization"></div>
+    <br />
+    <button id="addEvent" class="btn btn-primary">Add Event</button>
+
+</div>
 
 
 <script>
@@ -33,7 +39,15 @@
     var timeline = new vis.Timeline(container, items);
     
 
+    var newItems = new vis.DataSet();
     var newContainer = document.getElementById('newVisualization');
     var newTimeline = new vis.Timeline(newContainer, newItems);
+
+    function test() {
+        console.log("hi");
+    }
+    
+    var obj = document.getElementById("addEvent");
+    obj.addEventListener("click", test);
 
 </script>
