@@ -1,4 +1,4 @@
-import flatpickr from 'flatpickr';
+// import flatpickr from 'flatpickr';
 
 const toggleDateInputs = function() {
     const dueDateInput = document.getElementById('due_date');
@@ -19,4 +19,4 @@ const toggleDateInputs = function() {
     });
   };
   
-  export { toggleDateInputs }
+// export { toggleDateInputs }

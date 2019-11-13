@@ -1,5 +1,39 @@
+<%# Show the project's name, description and due date %>
 <div class="booyah-box">
     <h2><%= @project.name %></h2><br />
-    <h4><%= @project.description %></h4>
-    <h4><%= @project.due_date.to_formatted_s(:rfc822) %></h4>
+    <h5><%= @project.description %></h5>
+    <h5><%= @project.due_date.to_formatted_s(:rfc822) %></h5>
 </div>
+
+<%# Show timeline for the project %>
+<div class="box-timeline" id="visualization">
+    <h7>* Click and drag tasks to re-arrange</h7>
+    <br /><br />
+</div>
+<div class="box-timeline" id="newVisualization"></div>
+
+
+<script>
+  
+    var items = new vis.DataSet([
+        {id: 1, content: 'Editable', editable: true, start: '2010-08-23', group: 1},
+        {id: 2, content: 'Editable', editable: true, start: '2010-08-23T23:00:00', group: 2},
+        {id: 3, content: 'Read-only', editable: false, start: '2010-08-24T16:00:00', group: 1},
+        {id: 4, content: 'Read-only', editable: false, start: '2010-08-26', end: '2010-09-02', group: 2},
+        {id: 5, content: 'Edit Time Only', editable: { updateTime: true, updateGroup: false, remove: false }, start: '2010-08-28', group: 1},
+        {id: 6, content: 'Edit Group Only', editable: { updateTime: false, updateGroup: true, remove: false }, start: '2010-08-29', group: 2},
+        {id: 7, content: 'Remove Only', editable: { updateTime: false, updateGroup: false, remove: true }, start: '2010-08-31', end: '2010-09-03', group: 1},
+        {id: 8, content: 'Default', start: '2010-09-04T12:00:00', group: 2}
+    ]);
+
+    var container = document.getElementById('visualization');
+    var options = {
+        editable: true   // default for all items
+    };
+    var timeline = new vis.Timeline(container, items);
+    
+
+    var newContainer = document.getElementById('newVisualization');
+    var newTimeline = new vis.Timeline(newContainer, newItems);
+
+</script>

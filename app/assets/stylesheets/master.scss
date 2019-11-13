@@ -16,6 +16,18 @@ body    {
     margin: 2em;
 }
 
+.box-timeline    {
+    -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+    -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+    box-shadow: 1px 1px 2px 0 #d0d0d0;
+    // background: #fff;
+    border: 1px solid #ccc;
+    border-color: #8b8b8b #8b8b8b #8b8b8b #8b8b8b;
+    padding: 2em;
+    border-radius: 15px;
+    margin: 2em;
+}
+
 .main-header    {
     color: red;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -89,4 +101,17 @@ hr    {
 
 .btn-secondary  {
     font-weight: bold;
+}
+
+div.vis-editable,
+div.vis-editable.vis-selected {
+  /* custom styling for editable items... */
+}
+
+div.vis-readonly,
+div.vis-readonly.vis-selected {
+  /* custom styling for readonly items... */
+  background-color: #7444f8;
+  border-color: #562ec7;
+  color: white;
 }
