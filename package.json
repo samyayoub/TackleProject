@@ -2,8 +2,9 @@
   "name": "tackleproject",
   "private": true,
   "dependencies": {
+    "brew": "0.0.8",
     "flatpickr": "^4.5.7",
     "vis": "^4.21.0-EOL",
-    "vis-timeline": "^6.2.0"
+    "vis-timeline": "^6.2.3"
   }
 }

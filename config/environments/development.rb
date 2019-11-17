@@ -1,5 +1,7 @@
 Rails.application.configure do
 
+  config.action_mailer.delivery_method = :test
+
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   config.cache_classes = false
@@ -38,4 +40,9 @@ Rails.application.configure do
   config.assets.quiet = true
 
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # mailcacther
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+
 end
