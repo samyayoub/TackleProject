@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :teams
   devise_for :users
   root 'projects#index'
   resources :projects, only: [:new, :create, :show]
