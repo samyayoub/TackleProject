@@ -83,3 +83,5 @@ gem 'coffee-script-source', '1.8.0'
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
 end
+
+gem "pry-rails", group:"development"
