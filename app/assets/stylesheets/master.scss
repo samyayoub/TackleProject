@@ -113,5 +113,27 @@ div.vis-readonly.vis-selected {
   /* custom styling for readonly items... */
   background-color: #7444f8;
   border-color: #562ec7;
-  color: white;
+  color: rgb(0, 0, 0);
+}
+
+/* alternating column backgrounds */
+.vis-time-axis .grid.vis-odd {
+    background: #000000;
+}
+
+/* gray background in weekends, white text color */
+.vis-time-axis .vis-grid.vis-saturday,
+.vis-time-axis .vis-grid.vis-sunday {
+    background: rgb(179, 206, 214);
+}
+
+.vis-time-axis .vis-text.vis-saturday,
+.vis-time-axis .vis-text.vis-sunday {
+    color: rgb(0, 0, 0);
+}
+
+.endDate > .vis-custom-time-marker    {
+    background-color: red;
+    width: 30px;
+    height: 30px;
 }
