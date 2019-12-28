@@ -2,7 +2,7 @@
 <div class="booyah-box">
     <h2><%= @project.name %></h2><br />
     <h5><%= @project.description %></h5>
-    <h5 id=dueDate><%= @project.due_date.strftime("%m/%d/%Y at %I:%M%P") %></h5>
+    <h5><%= @project.due_date.to_formatted_s(:rfc822) %></h5>
 </div>
 
 <%# Show timeline for the project %>
@@ -34,28 +34,14 @@
 
     var container = document.getElementById('visualization');
     var options = {
-        editable: true,   // default for all items
+        editable: true   // default for all items
     };
-    var timeline = new vis.Timeline(container, items, options);
+    var timeline = new vis.Timeline(container, items);
     
 
-    var newItems = new vis.DataSet([]);
-
+    var newItems = new vis.DataSet();
     var newContainer = document.getElementById('newVisualization');
-    var newOptions = {
-        zoomFriction: 9, //Specifices how strong the zooming is for each scroll tick. Higher zooming friction will slow zooming speed.
-        start: new Date(), //Sets the begining date of the project
-        end: new Date(<%= @project.due_date.strftime("%Y, %m, %d") %>), //Sets the end date of the project
-        timeAxis: {scale: 'day', step: 2}, //Specify a fxied scale and step size for the time axis
-        // zoomable: true // disables timeline can be zoomed in/out by pinching or scrolling
-    };
-
-    var newTimeline = new vis.Timeline(newContainer, newItems, newOptions);
-
-    //Creat the Due Date mark
-    newTimeline.addCustomTime(new Date("<%= @project.due_date.strftime("%Y, %m, %d") %>"), "endDate");
-    newTimeline.setCustomTimerMarker("Project Due", "endDate", "editable: false");
-    newTimeline.setCustomTimeTitle("Project Due", "endDate");
+    var newTimeline = new vis.Timeline(newContainer, newItems);
 
     function test() {
         console.log("hi");
