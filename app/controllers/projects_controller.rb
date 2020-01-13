@@ -10,12 +10,12 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        # Project.create(project_params)
-        # redirect_to root_path
-
         @project = current_user.projects.create(project_params)
+        redirect_to root_path
+
+        # @project = current_user.projects.create(project_params)
         # if @project.valid?
-            redirect_to root_path
+        #     redirect_to root_path
         # else
         #     render :new, status: :unprocessable_entity
         # end
